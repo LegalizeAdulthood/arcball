@@ -1,7 +1,7 @@
 #pragma once
 
-#include <glm/glm.hpp>
 #include <glm/ext/quaternion_float.hpp>
+#include <glm/glm.hpp>
 
 namespace arcball
 {
@@ -29,7 +29,7 @@ public:
     {
         return m_center;
     }
-    void set_center( const glm::vec4& value )
+    void set_center(const glm::vec4 &value)
     {
         m_center = value;
     }
@@ -42,6 +42,8 @@ public:
     {
         return m_radius;
     }
+
+    void mouse_move(float x, float y);
 
 private:
     glm::vec4 m_center{0.0f, 0.0f, 0.0f, 1.0f};

@@ -1,5 +1,7 @@
 #include "arcball/arcball.h"
 
+#include <cassert>
+
 namespace arcball
 {
 
@@ -14,6 +16,14 @@ Control::Control()
     m_constraint_set_sizes[AxisSet::BodyAxes] = 3;
     m_constraint_sets[AxisSet::OtherAxes] = &s_other_axis.x;
     m_constraint_set_sizes[AxisSet::OtherAxes] = 1;
+}
+
+void Control::mouse_move(float x, float y)
+{
+    assert(x >= -1.0f && x <= 1.0f);
+    assert(y >= -1.0f && y <= 1.0f);
+    m_v_now.x = x;
+    m_v_now.y = y;
 }
 
 } // namespace arcball
