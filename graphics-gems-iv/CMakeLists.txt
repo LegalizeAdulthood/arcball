@@ -1,4 +1,4 @@
-add_library("graphics-gems" STATIC
+add_library("graphics-gems" INTERFACE
 Ball.c
 Ball.h
 BallAux.c
