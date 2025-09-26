@@ -3,6 +3,8 @@
 #include <gl/gl.h>
 #include <gl/device.h>
 
+#include <stdlib.h>
+
 #include "BallAux.h"
 #include "Body.h"
 #include "Ball.h"
@@ -12,6 +14,9 @@ typedef struct {long x, y;} Place;
 #define RADIUS	  (0.75)
 #define CNTRLDN	  1
 #define SHIFTDN	  2
+
+void scene_Draw(BallData *ball);
+void body_Draw(BallData *ball);
 
 void main(void)
 {
