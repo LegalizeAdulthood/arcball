@@ -57,6 +57,15 @@ public:
         return m_axis_set;
     }
 
+    void show(bool value)
+    {
+        m_shown = value;
+    }
+    bool get_shown() const
+    {
+        return m_shown;
+    }
+
 private:
     glm::vec4 m_center{0.0f, 0.0f, 0.0f, 1.0f};
     double m_radius{1.0f};
@@ -71,7 +80,7 @@ private:
     glm::vec4 m_vr_to{0.0f, 0.0f, 0.0f, 1.0f};
     glm::mat4x4 m_now{glm::identity<glm::mat4x4>()};
     glm::mat4x4 m_down{glm::identity<glm::mat4x4>()};
-    bool m_show_result{};
+    bool m_shown{};
     bool m_dragging{};
     const float *m_constraint_sets[AxisSet::NSets]{};
     int m_constraint_set_sizes[AxisSet::NSets]{};
