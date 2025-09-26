@@ -6,6 +6,7 @@
   "dependencies": [
     "glm",
     "gtest",
-    "opengl"
+    "opengl",
+    "wxwidgets"
   ]
 }
