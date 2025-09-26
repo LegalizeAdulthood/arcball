@@ -9,12 +9,13 @@ include(vs_startup_project)
 set_cxx_standard(17)
 
 set(ARCBALL_PROJECT_NAME "Arc Ball" CACHE "STRING" "Default project name for IDEs")
-project("${ARCBALL_PROJECT_NAME}" CXX)
+project("${ARCBALL_PROJECT_NAME}" CXX C)
 
 include(CTest)
 
 add_subdirectory(libs)
 add_subdirectory(tools)
+add_subdirectory(graphics-gems-iv)
 
 vs_startup_project(arcball-viewer)
 
