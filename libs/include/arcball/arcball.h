@@ -45,6 +45,18 @@ public:
 
     void mouse_move(float x, float y);
 
+    void set_constraint(AxisSet value)
+    {
+        if (!m_dragging)
+        {
+            m_axis_set = value;
+        }
+    }
+    AxisSet get_constraint() const
+    {
+        return m_axis_set;
+    }
+
 private:
     glm::vec4 m_center{0.0f, 0.0f, 0.0f, 1.0f};
     double m_radius{1.0f};
