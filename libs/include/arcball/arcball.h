@@ -66,6 +66,8 @@ public:
         return m_shown;
     }
 
+    void update();
+
 private:
     glm::vec4 m_center{0.0f, 0.0f, 0.0f, 1.0f};
     double m_radius{1.0f};
