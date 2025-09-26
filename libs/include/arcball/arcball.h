@@ -34,6 +34,15 @@ public:
         m_center = value;
     }
 
+    void set_radius(double value)
+    {
+        m_radius = value;
+    }
+    double get_radius() const
+    {
+        return m_radius;
+    }
+
 private:
     glm::vec4 m_center{0.0f, 0.0f, 0.0f, 1.0f};
     double m_radius{1.0f};
